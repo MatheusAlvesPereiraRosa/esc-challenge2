@@ -4,7 +4,9 @@ module.exports = {
     "es2021": true
   },
   "globals":{
-    "require": true
+    "require": true,
+    "module": true,
+    "process": true
   },
   "extends": "eslint:recommended",
   "overrides": [
