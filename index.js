@@ -16,6 +16,10 @@ app.use(cors({
 
 const port = process.env.PORT || 5000
 
+app.get("/", function(req, res) {
+  res.send("Olá, seja bem vindo ao meu teste!!!")
+})
+
 app.use('/auth', authRoutes)
 
 app.listen(port, async () => {
