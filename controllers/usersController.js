@@ -102,8 +102,6 @@ module.exports = {
       // Achando o usuário por email
       const user = await User.findOne({ email });
 
-      console.log(user)
-
       if (!user) {
         return res.json({ mensagem: 'Usuário e/ou senha inválidos' });
       }
@@ -134,7 +132,6 @@ module.exports = {
         token: token
       }
 
-      console.log("Login bem sucedido")
       return res.status(200).json(responseJson)
     } catch (error) {
       console.error('Erro durante login:', error);
@@ -146,7 +143,6 @@ module.exports = {
     await User.find()
       .then((users) => {
         res.json(users)
-        console.log('Usuários cadastrados:', users);
       })
       .catch((error) => {
         console.error('mensagem:', error);
