@@ -188,7 +188,7 @@ module.exports = {
       const decodedToken = jwt.verify(token, SECRET_KEY);
 
       // Checando se o token expirou
-      if (decodedToken.exp < Date.now() / 360) {
+      if (decodedToken.exp < Date.now() / 1000) {
         return res.status(400).json({ mensagem: 'Token expirado' });
       }
 
