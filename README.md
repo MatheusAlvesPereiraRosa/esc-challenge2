@@ -17,7 +17,7 @@ Link: https://insomnia.rest/download
 
 ### Sign up
 
-https://esc-challenge2-bec0f34c4d2f.herokuapp.com/auth/register
+URL: https://esc-challenge2-bec0f34c4d2f.herokuapp.com/auth/register
 
 Basta inserir as informações igual o mostrado abaixo e a rota irá mostrar as informações e o token necessário para logar, no caso de tudo ter dado certo.
 
@@ -34,7 +34,7 @@ formato de json:
 
 ### Sign in
 
-https://esc-challenge2-bec0f34c4d2f.herokuapp.com/auth/login
+URL: https://esc-challenge2-bec0f34c4d2f.herokuapp.com/auth/login
 
 Logue com suas informações e a rota irá oferecer a informações do login junto do token (caso esteja tudo certo).
 
@@ -49,6 +49,8 @@ formato de json:
 
 ### Users (informações dos usuários cadastrados)
 
+URL: https://esc-challenge2-bec0f34c4d2f.herokuapp.com/auth/users
+
 Para entrar nessa rota, é necessário utilizar o token gerado ou na criação de usuário ou no login/sign in
 
 Header necessário:
@@ -60,6 +62,8 @@ Header necessário:
 ### Bônus
 
 #### ResetPassword
+
+URL: https://esc-challenge2-bec0f34c4d2f.herokuapp.com/auth/resetPassword
 
 Rota para solicitar token para trocar senha. O token é criado a partir de JWT, juntando a informação do _id do usuário e uma chave secreta (no arquivo .env) ao token
 
@@ -73,6 +77,8 @@ json:
 ```
 
 #### ChangePassword
+
+URL: https://esc-challenge2-bec0f34c4d2f.herokuapp.com/auth/changePassword
 
 Com o token em mãos, basta mandá-lo junto da senha e ela será trocada
 
