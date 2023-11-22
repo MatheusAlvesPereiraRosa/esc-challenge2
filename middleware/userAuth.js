@@ -4,12 +4,14 @@ const { SECRET_KEY } = process.env;
 function authenticateUser(req, res, next) {
   const token = req.header('Authorization');
 
-  if (!token || token === undefined) {
-    return res.status(401).json({ mensagem: 'Token de autenticação faltando' });
+  if (!token || token === undefined || !token.startsWith("Bearer ")) {
+    return res.status(401).json({ mensagem: 'Token de autenticação faltando ou incorreto' });
   }
 
+  const tokenValue = token.split(' ')[1];
+
   try {
-    const decoded = jwt.verify(token, SECRET_KEY);
+    const decoded = jwt.verify(tokenValue, SECRET_KEY);
 
     req.user = decoded.user;
 
