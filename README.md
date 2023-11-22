@@ -83,6 +83,7 @@ json:
     "token" : "##################",
     "senha" : "#####"
   }
+```
 
 Obs.: Substitua os ### pela informação que será inserida na rota, assim como sugerem os nomes.
 
@@ -102,10 +103,14 @@ Depois baixe as dependências
 
 Depois configure o seu arquivo .env com as seguintes informações
 
+.env
+
+```
 DB_USER=#####
 DB_PASS=#####
 DB_NAME=#####
 SECRET_KEY="######"
+```
 
 E por fim, rode-a com
 
